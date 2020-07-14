@@ -1,22 +1,30 @@
-//
-//  AppDelegate.swift
-//  Kanye Rest
-//
-//  Created by Sasha Putsikovich on 13.07.2020.
-//  Copyright © 2020 Sasha Putsikovich. All rights reserved.
-//
-
 import UIKit
-
+import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let center = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        ParseJson().parseQuote(of: "https://api.kanye.rest/", complitionHandler: {
+            guard let quote = kanyeQuote.last?.quote else{return}
+            NotificationK().sendNatification(of: quote)
+        })
+        NotificationK().sendNatification(of: "")
+        center.requestAuthorization(options: [.alert, .sound]) { (granded, error) in
+            if granded{
+                print(granded)
+            }else{
+                guard let error = error else{return}
+                print(error.localizedDescription)
+            }
+            }
+        
         return true
     }
+
+    
 
     // MARK: UISceneSession Lifecycle
 
@@ -34,4 +42,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 

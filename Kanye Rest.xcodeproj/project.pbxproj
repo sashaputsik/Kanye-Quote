@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F8C222724BDE7E900751A48 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C222624BDE7E900751A48 /* NotificationSettings.swift */; };
 		9FB9FA5524BC9D0F0001FF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB9FA5424BC9D0F0001FF44 /* AppDelegate.swift */; };
 		9FB9FA5724BC9D0F0001FF44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB9FA5624BC9D0F0001FF44 /* SceneDelegate.swift */; };
 		9FB9FA5924BC9D0F0001FF44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB9FA5824BC9D0F0001FF44 /* ViewController.swift */; };
 		9FB9FA5C24BC9D0F0001FF44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB9FA5A24BC9D0F0001FF44 /* Main.storyboard */; };
 		9FB9FA5E24BC9D110001FF44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FB9FA5D24BC9D110001FF44 /* Assets.xcassets */; };
 		9FB9FA6124BC9D110001FF44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB9FA5F24BC9D110001FF44 /* LaunchScreen.storyboard */; };
+		9FB9FA6F24BC9D780001FF44 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB9FA6E24BC9D780001FF44 /* Model.swift */; };
+		9FB9FA7124BC9DD00001FF44 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB9FA7024BC9DD00001FF44 /* Parse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F8C222624BDE7E900751A48 /* NotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
 		9FB9FA5124BC9D0F0001FF44 /* Kanye Rest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanye Rest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB9FA5424BC9D0F0001FF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FB9FA5624BC9D0F0001FF44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		9FB9FA5D24BC9D110001FF44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FB9FA6024BC9D110001FF44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FB9FA6224BC9D110001FF44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FB9FA6E24BC9D780001FF44 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9FB9FA7024BC9DD00001FF44 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		9FB9FA5324BC9D0F0001FF44 /* Kanye Rest */ = {
 			isa = PBXGroup;
 			children = (
-				9FB9FA5424BC9D0F0001FF44 /* AppDelegate.swift */,
-				9FB9FA5624BC9D0F0001FF44 /* SceneDelegate.swift */,
-				9FB9FA5824BC9D0F0001FF44 /* ViewController.swift */,
-				9FB9FA5A24BC9D0F0001FF44 /* Main.storyboard */,
-				9FB9FA5D24BC9D110001FF44 /* Assets.xcassets */,
-				9FB9FA5F24BC9D110001FF44 /* LaunchScreen.storyboard */,
-				9FB9FA6224BC9D110001FF44 /* Info.plist */,
+				9FB9FA6824BC9D180001FF44 /* AppFiles */,
+				9FB9FA6B24BC9D4C0001FF44 /* Models */,
+				9FB9FA6C24BC9D550001FF44 /* Storyboard */,
 			);
 			path = "Kanye Rest";
+			sourceTree = "<group>";
+		};
+		9FB9FA6824BC9D180001FF44 /* AppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9FB9FA6D24BC9D640001FF44 /* Base */,
+				9FB9FA6924BC9D220001FF44 /* Files */,
+			);
+			path = AppFiles;
+			sourceTree = "<group>";
+		};
+		9FB9FA6924BC9D220001FF44 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FB9FA5424BC9D0F0001FF44 /* AppDelegate.swift */,
+				9FB9FA5624BC9D0F0001FF44 /* SceneDelegate.swift */,
+				9FB9FA5F24BC9D110001FF44 /* LaunchScreen.storyboard */,
+				9FB9FA6224BC9D110001FF44 /* Info.plist */,
+				9FB9FA5D24BC9D110001FF44 /* Assets.xcassets */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+		9FB9FA6B24BC9D4C0001FF44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FB9FA5824BC9D0F0001FF44 /* ViewController.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FB9FA6C24BC9D550001FF44 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9FB9FA5A24BC9D0F0001FF44 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9FB9FA6D24BC9D640001FF44 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9FB9FA6E24BC9D780001FF44 /* Model.swift */,
+				9FB9FA7024BC9DD00001FF44 /* Parse.swift */,
+				9F8C222624BDE7E900751A48 /* NotificationSettings.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +190,9 @@
 				9FB9FA5924BC9D0F0001FF44 /* ViewController.swift in Sources */,
 				9FB9FA5524BC9D0F0001FF44 /* AppDelegate.swift in Sources */,
 				9FB9FA5724BC9D0F0001FF44 /* SceneDelegate.swift in Sources */,
+				9FB9FA7124BC9DD00001FF44 /* Parse.swift in Sources */,
+				9FB9FA6F24BC9D780001FF44 /* Model.swift in Sources */,
+				9F8C222724BDE7E900751A48 /* NotificationSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W64W8UKVB6;
-				INFOPLIST_FILE = "Kanye Rest/Info.plist";
+				INFOPLIST_FILE = "Kanye Rest/AppFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W64W8UKVB6;
-				INFOPLIST_FILE = "Kanye Rest/Info.plist";
+				INFOPLIST_FILE = "Kanye Rest/AppFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
