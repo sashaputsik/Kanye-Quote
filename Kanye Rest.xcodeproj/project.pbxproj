@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F8C222724BDE7E900751A48 /* NotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C222624BDE7E900751A48 /* NotificationSettings.swift */; };
+		9F8C222D24BDF60D00751A48 /* hotpng.com.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F8C222C24BDF60D00751A48 /* hotpng.com.png */; };
 		9FB9FA5524BC9D0F0001FF44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB9FA5424BC9D0F0001FF44 /* AppDelegate.swift */; };
 		9FB9FA5724BC9D0F0001FF44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB9FA5624BC9D0F0001FF44 /* SceneDelegate.swift */; };
 		9FB9FA5924BC9D0F0001FF44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB9FA5824BC9D0F0001FF44 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		9F8C222624BDE7E900751A48 /* NotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettings.swift; sourceTree = "<group>"; };
+		9F8C222C24BDF60D00751A48 /* hotpng.com.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotpng.com.png; sourceTree = "<group>"; };
 		9FB9FA5124BC9D0F0001FF44 /* Kanye Rest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanye Rest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB9FA5424BC9D0F0001FF44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FB9FA5624BC9D0F0001FF44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				9FB9FA5424BC9D0F0001FF44 /* AppDelegate.swift */,
+				9F8C222C24BDF60D00751A48 /* hotpng.com.png */,
 				9FB9FA5624BC9D0F0001FF44 /* SceneDelegate.swift */,
 				9FB9FA5F24BC9D110001FF44 /* LaunchScreen.storyboard */,
 				9FB9FA6224BC9D110001FF44 /* Info.plist */,
@@ -176,6 +179,7 @@
 			files = (
 				9FB9FA6124BC9D110001FF44 /* LaunchScreen.storyboard in Resources */,
 				9FB9FA5E24BC9D110001FF44 /* Assets.xcassets in Resources */,
+				9F8C222D24BDF60D00751A48 /* hotpng.com.png in Resources */,
 				9FB9FA5C24BC9D0F0001FF44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

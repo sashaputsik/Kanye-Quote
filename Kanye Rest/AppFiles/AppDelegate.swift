@@ -6,12 +6,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let center = UNUserNotificationCenter.current()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        ParseJson().parseQuote(of: "https://api.kanye.rest/", complitionHandler: {
-            guard let quote = kanyeQuote.last?.quote else{return}
-            NotificationK().sendNatification(of: quote)
-        })
-        NotificationK().sendNatification(of: "")
         center.requestAuthorization(options: [.alert, .sound]) { (granded, error) in
             if granded{
                 print(granded)

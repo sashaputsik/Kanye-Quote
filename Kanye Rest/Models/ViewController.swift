@@ -5,10 +5,14 @@ class ViewController: UIViewController {
     let url = "https://api.kanye.rest/"
     @IBOutlet weak var quetoLabel: UILabel!
     @IBOutlet weak var nextQuoteButton: UIButton!
+    @IBOutlet weak var shareQuoteButton: UIButton!
+    @IBOutlet weak var kanyeQuoteLabel: UILabel!
+    
     let center = UNUserNotificationCenter.current()
     
     override func viewWillAppear(_ animated: Bool) {
-       center.delegate = self
+        center.delegate = self
+        frameAndLayer()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,8 @@ class ViewController: UIViewController {
         kanyeQuote.removeAll()
         ParseJson().parseQuote(of: url) {
             DispatchQueue.main.async {
+                guard let quote = kanyeQuote.last?.quote else{return}
+                NotificationK().sendNatification(of: quote)
                 self.quetoLabel.text = kanyeQuote.last?.quote
             }
         }
@@ -50,5 +56,19 @@ extension ViewController: UNUserNotificationCenterDelegate{
                     break
                 }
         }
+    }
+}
+extension ViewController{
+    func frameAndLayer(){
+        nextQuoteButton.layer.cornerRadius = 10
+        nextQuoteButton.layer.shadowOffset = CGSize(width: 1, height: 1)
+        nextQuoteButton.layer.shadowOpacity = 0.5
+        shareQuoteButton.layer.cornerRadius = 10
+        shareQuoteButton.layer.borderWidth = 0.5
+        shareQuoteButton.layer.borderColor = UIColor.darkGray.cgColor
+        shareQuoteButton.layer.shadowOpacity = 0.3
+        shareQuoteButton.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
+        kanyeQuoteLabel.layer.shadowOpacity = 0.4
+        kanyeQuoteLabel.layer.shadowOffset = CGSize(width: 1, height: 1)
     }
 }
